@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router'
           <RouterLink
             :to="{ name: 'inicio' }"
             class="text-white uppercase font-bold"
-            active-class="text-orange-500"
+            active-class="!text-orange-500"
           >
             Home
           </RouterLink>
@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router'
           <RouterLink
             :to="{ name: 'favoritos' }"
             class="text-white uppercase font-bold"
-            active-class="text-orange-500"
+            active-class="!text-orange-500"
           >
             Favorites
           </RouterLink>
