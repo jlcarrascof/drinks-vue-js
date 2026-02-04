@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import Header from './components/Header_.vue'
+</script>
 
 <template>
-  <div><h1>From Pinia</h1></div>
+  <Header />
 </template>
