@@ -11,7 +11,15 @@ import { RouterLink } from 'vue-router'
             <img class="w-32" src="/img/logo.svg" alt="logotipo" />
           </RouterLink>
         </div>
-        <nav></nav>
+        <nav class="flex gap-4">
+          <RouterLink
+            :to="{ name: 'inicio' }"
+            class="text-white uppercase font-bold"
+            active-class="text-orange-500"
+          >
+            Home
+          </RouterLink>
+        </nav>
       </div>
 
       <form class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6">
