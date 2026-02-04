@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <div>From Pinia</div>
+  <div><h1>From Pinia</h1></div>
 </template>
