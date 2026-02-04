@@ -19,6 +19,14 @@ import { RouterLink } from 'vue-router'
           >
             Home
           </RouterLink>
+
+          <RouterLink
+            :to="{ name: 'favoritos' }"
+            class="text-white uppercase font-bold"
+            active-class="text-orange-500"
+          >
+            Favorites
+          </RouterLink>
         </nav>
       </div>
 
