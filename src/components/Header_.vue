@@ -10,7 +10,12 @@
           <label class="block text-white uppercase font-extrabold text-lg" for="ingrediente"
             >Name or Ingredient</label
           >
-          <input id="ingrediente" type="text" class="p-3 w-full rounded-lg focus:outline-none" />
+          <input
+            id="ingrediente"
+            type="text"
+            class="p-3 w-full rounded-lg focus:outline-none"
+            placeholder="Name or Ingredient: by ex. Vodka, Tequila, etc."
+          />
         </div>
       </form>
     </div>
