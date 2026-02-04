@@ -13,8 +13,8 @@
           <input
             id="ingrediente"
             type="text"
-            class="p-3 w-full rounded-lg focus:outline-none"
-            placeholder="Name or Ingredient: by ex. Vodka, Tequila, etc."
+            class="p-3 w-full rounded-lg focus:outline-none bg-white"
+            placeholder="Name or Ingredient: e.g. Vodka, Tequila, etc."
           />
         </div>
         <!--
