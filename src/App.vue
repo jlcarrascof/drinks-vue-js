@@ -1,7 +1,7 @@
 <script setup>
-import Header from './components/Header_.vue'
+import HeaderForm from './components/HeaderForm.vue'
 </script>
 
 <template>
-  <Header />
+  <HeaderForm />
 </template>
