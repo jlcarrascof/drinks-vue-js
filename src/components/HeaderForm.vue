@@ -7,7 +7,7 @@ const paginaInicio = computed(() => route.name === 'inicio')
 </script>
 
 <template>
-  <header class="bg-slate-800">
+  <header class="bg-slate-800" :class="{ header: paginaInicio }">
     <div class="mx-auto container px-5 py-16">
       <div class="flex justify-between items-center">
         <div>
