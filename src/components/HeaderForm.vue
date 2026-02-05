@@ -50,13 +50,18 @@ const paginaInicio = computed(() => route.name === 'inicio')
             type="text"
             class="p-3 w-full rounded-lg focus:outline-none bg-white"
             placeholder="Name or Ingredient: e.g. Vodka, Tequila, etc."
+            v-model="store.busqueda.nombre"
           />
         </div>
         <div class="space-y-4">
           <label class="block text-white uppercase font-extrabold text-lg" for="categoria"
             >Category</label
           >
-          <select id="categoria" class="p-3 w-full rounded-lg focus:outline-none bg-white">
+          <select
+            id="categoria"
+            class="p-3 w-full rounded-lg focus:outline-none bg-white"
+            v-model="store.busqueda.categoria"
+          >
             <option value="">-- Select --</option>
             <option
               v-for="categoria in store.categorias"
