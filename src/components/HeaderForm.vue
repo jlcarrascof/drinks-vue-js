@@ -66,3 +66,11 @@ const paginaInicio = computed(() => route.name === 'inicio')
     </div>
   </header>
 </template>
+
+<style>
+.header {
+  background-image: url('/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+</style>
