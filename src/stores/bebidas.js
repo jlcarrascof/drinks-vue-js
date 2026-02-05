@@ -25,6 +25,10 @@ export const useBebidasStore = defineStore('bebidas', () => {
     recetas.value = drinks
   }
 
+  function seleccionarBebida(id) {
+    console.log(id)
+  }
+
   return {
     categorias,
     busqueda,
