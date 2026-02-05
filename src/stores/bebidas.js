@@ -1,5 +1,6 @@
 import { ref, reactive, onMounted } from 'vue'
 import { defineStore } from 'pinia'
+import APIService from '../services/APIService'
 
 export const useBebidasStore = defineStore('bebidas', () => {
   const categorias = ref([])
@@ -11,7 +12,7 @@ export const useBebidasStore = defineStore('bebidas', () => {
   onMounted(async function () {
     const {
       data: { drinks },
-    } = await axios('/list.php?c=list')
+    } = await axios('')
 
     categorias.value = drinks
   })
