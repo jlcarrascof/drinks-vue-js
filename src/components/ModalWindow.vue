@@ -1,8 +1,10 @@
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { useModalStore } from '../stores/modal'
+import { useBebidasStore } from '../stores/bebidas'
 
 const modal = useModalStore()
+const bebidas = useBebidasStore()
 </script>
 
 <template>
