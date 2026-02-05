@@ -1,9 +1,12 @@
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import { useModalStore } from '../stores/modal'
+
+const modal = useModalStore()
 </script>
 
 <template>
-  <TransitionRoot as="template" :show="true">
+  <TransitionRoot as="template" :show="modal.modal">
     <Dialog as="div" class="relative z-10">
       <TransitionChild
         as="template"
