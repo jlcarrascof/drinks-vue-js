@@ -34,5 +34,6 @@ export const useBebidasStore = defineStore('bebidas', () => {
     busqueda,
     obtenerRecetas,
     recetas,
+    seleccionarBebida,
   }
 })
