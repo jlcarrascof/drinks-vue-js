@@ -12,14 +12,12 @@ export const useBebidasStore = defineStore('bebidas', () => {
   onMounted(async function () {
     const {
       data: { drinks },
-    } = await axios('')
+    } = await APIService.obtenerCategorias()
 
     categorias.value = drinks
   })
 
-  function obtenerRecetas() {
-    console.log('Asking to the API')
-  }
+  function obtenerRecetas() {}
 
   return {
     categorias,
