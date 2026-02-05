@@ -8,8 +8,12 @@ defineProps({
 
 <template>
   <div class="border shadow-lg">
-    <div>
-      <img :src="receta.strDrinkThumb" />
+    <div class="overflow-hidden">
+      <img
+        class="hover:scale-125 transition-transform hover:rotate-2"
+        :src="receta.strDrinkThumb"
+        :alt="'Image of ' + receta.strDrink"
+      />
     </div>
     <div class="p-5">
       <h2 class="text-2xl truncate font-extrabold">{{ receta.strDrink }}</h2>
