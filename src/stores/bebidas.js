@@ -17,7 +17,10 @@ export const useBebidasStore = defineStore('bebidas', () => {
     categorias.value = drinks
   })
 
-  function obtenerRecetas() {}
+  async function obtenerRecetas() {
+    const data = await APIService.buscarRecetas(busqueda)
+    console.log(data)
+  }
 
   return {
     categorias,
