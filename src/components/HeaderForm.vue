@@ -1,5 +1,9 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { computed } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+
+const route = useRoute()
+const paginaInicio = computed(() => route.name === 'inicio')
 </script>
 
 <template>
@@ -30,7 +34,10 @@ import { RouterLink } from 'vue-router'
         </nav>
       </div>
 
-      <form class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6">
+      <form
+        class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+        v-if="paginaInicio"
+      >
         <div class="space-y-4">
           <label class="block text-white uppercase font-extrabold text-lg" for="ingrediente"
             >Name or Ingredient</label
