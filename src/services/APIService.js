@@ -8,6 +8,6 @@ export default {
     return api(`/filter.php?c=${categoria}&i=${nombre}`)
   },
   buscarReceta(id) {
-    return api(`/lookup.php?id=${id}`)
+    return api(`/lookup.php?i=${id}`)
   },
 }
