@@ -10,6 +10,8 @@ const paginaInicio = computed(() => route.name === 'inicio')
 
 const handleSubmit = () => {
   // TODO: Validar
+
+  store.obtenerRecetas()
 }
 </script>
 
