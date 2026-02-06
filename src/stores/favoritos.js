@@ -30,9 +30,15 @@ export const useFavoritosStore = defineStore('favoritos', () => {
     return favoritosLocalStorage.some((favorito) => favorito.idDrink === id)
   }
 
+  function eliminarFavorito() {
+    favoritos.value = favoritos.value.filter(
+      (favorito) => favorito.idDrink !== bebidas.receta.idDrink,
+    )
+  }
+
   function handleClickFavorito() {
     if (existeFavorito(bebidas.receta.idDrink)) {
-      console.log('Ya existe ....')
+      eliminarFavorito()
     } else {
       favoritos.value.push(bebidas.receta)
     }
