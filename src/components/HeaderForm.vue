@@ -28,7 +28,7 @@ const handleSubmit = () => {
           <RouterLink
             :to="{ name: 'inicio' }"
             class="uppercase font-bold"
-            active-class="!text-orange-500"
+            active-class="text-orange-500"
           >
             Home
           </RouterLink>
@@ -36,7 +36,7 @@ const handleSubmit = () => {
           <RouterLink
             :to="{ name: 'favoritos' }"
             class="uppercase font-bold"
-            active-class="!text-orange-500"
+            active-class="text-orange-500"
           >
             Favorites
           </RouterLink>
