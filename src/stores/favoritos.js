@@ -36,11 +36,15 @@ export const useFavoritosStore = defineStore('favoritos', () => {
     )
   }
 
+  function agregarFavorito() {
+    favoritos.value.push(bebidas.receta)
+  }
+
   function handleClickFavorito() {
     if (existeFavorito()) {
       eliminarFavorito()
     } else {
-      favoritos.value.push(bebidas.receta)
+      agregarFavorito()
     }
   }
 
