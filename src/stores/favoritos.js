@@ -45,6 +45,7 @@ export const useFavoritosStore = defineStore('favoritos', () => {
     favoritos.value.push(bebidas.receta)
 
     notificaciones.mostrar = true
+    notificaciones.texto = 'Added to favorites'
   }
 
   function handleClickFavorito() {
