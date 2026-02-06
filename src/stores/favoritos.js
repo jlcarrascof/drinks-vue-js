@@ -47,8 +47,8 @@ export const useFavoritosStore = defineStore('favoritos', () => {
       eliminarFavorito()
     } else {
       agregarFavorito()
-      modal.modal = false
     }
+    modal.modal = false
   }
 
   return {
