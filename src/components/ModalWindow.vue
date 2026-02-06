@@ -75,6 +75,12 @@ const formatearIngredientes = () => {
                     </DialogTitle>
 
                     <div v-html="formatearIngredientes().outerHTML"></div>
+
+                    <DialogTitle as="h3" class="text-gray-900 text-4xl font-extrabold my-5">
+                      Instructions
+                    </DialogTitle>
+
+                    <p class="text-lg text-gray-500">{{ bebidas.receta.strInstrucciones }}</p>
                   </div>
                 </div>
                 <div class="mt-5 sm:mt-6 flex justify-between gap-4">
