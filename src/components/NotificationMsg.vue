@@ -1,7 +1,9 @@
 <script setup>
-import { ref } from 'vue'
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/vue/24/outline'
 import { XMarkIcon } from '@heroicons/vue/20/solid'
+import { useNotificacionStore } from '../stores/notificaciones'
+
+const notificaciones = useNotificacionStore()
 </script>
 
 <template>
@@ -19,7 +21,7 @@ import { XMarkIcon } from '@heroicons/vue/20/solid'
         leave-to-class="opacity-0"
       >
         <div
-          v-if="show"
+          v-if="notificaciones.mostrar"
           class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
         >
           <div class="p-4">
