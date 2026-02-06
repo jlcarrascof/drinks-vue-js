@@ -24,10 +24,10 @@ export const useFavoritosStore = defineStore('favoritos', () => {
     localStorage.setItem('favoritos', JSON.stringify(favoritos.value))
   }
 
-  function existeFavorito(id) {
+  function existeFavorito() {
     const favoritosLocalStorage = JSON.parse(localStorage.getItem('favoritos')) ?? []
 
-    return favoritosLocalStorage.some((favorito) => favorito.idDrink === id)
+    return favoritosLocalStorage.some((favorito) => favorito.idDrink === bebidas.receta.idDrink)
   }
 
   function eliminarFavorito() {
@@ -37,7 +37,7 @@ export const useFavoritosStore = defineStore('favoritos', () => {
   }
 
   function handleClickFavorito() {
-    if (existeFavorito(bebidas.receta.idDrink)) {
+    if (existeFavorito()) {
       eliminarFavorito()
     } else {
       favoritos.value.push(bebidas.receta)
