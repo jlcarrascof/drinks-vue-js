@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { CheckCircleIcon } from '@heroicons/vue/24/outline'
+import { XMarkIcon } from '@heroicons/vue/20/solid'
+</script>
 
 <template>
   <div
