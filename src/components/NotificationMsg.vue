@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { CheckCircleIcon } from '@heroicons/vue/24/outline'
+import { CheckCircleIcon, XCircleIcon } from '@heroicons/vue/24/outline'
 import { XMarkIcon } from '@heroicons/vue/20/solid'
 
 const show = ref(false)
@@ -32,6 +32,7 @@ setTimeout(() => {
             <div class="flex items-start">
               <div class="shrink-0">
                 <CheckCircleIcon class="h-6 w-6 text-green-400" aria-hidden="true" />
+                <XCircleIcon class="h-6 w-6 text-red-400" aria-hidden="true" />
               </div>
               <div class="ml-3 w-0 flex-1 pt-0.5">
                 <p class="text-sm font-medium text-gray-900"></p>
