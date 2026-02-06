@@ -15,7 +15,7 @@ const formatearIngredientes = () => {
       const cantidad = bebidas.receta[`strMeasure${i}`]
 
       const ingredienteCantidad = document.createElement('P')
-      ingredienteCantidad.classList.add('text-lg')
+      ingredienteCantidad.classList.add('text-lg', 'text-gray-500')
       ingredienteCantidad.textContent = `${ingrediente} - ${cantidad}`
 
       ingredientesDiv.appendChild(ingredienteCantidad)
