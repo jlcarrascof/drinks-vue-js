@@ -80,7 +80,7 @@ const formatearIngredientes = () => {
                       Instructions
                     </DialogTitle>
 
-                    <p class="text-lg text-gray-500">{{ bebidas.receta.strInstrucciones }}</p>
+                    <p class="text-lg text-gray-500">{{ bebidas.receta.strInstructions }}</p>
                   </div>
                 </div>
                 <div class="mt-5 sm:mt-6 flex justify-between gap-4">
