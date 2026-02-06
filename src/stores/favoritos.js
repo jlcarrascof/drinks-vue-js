@@ -7,7 +7,7 @@ export const useFavoritosStore = defineStore('favoritos', () => {
   const favoritos = ref([])
 
   const handleClickFavorito = () => {
-    console.log(bebidas.receta)
+    favoritos.value.push(bebidas.receta)
   }
 
   return {
