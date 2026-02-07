@@ -10,11 +10,11 @@
           name="prompt"
           id="prompt"
           class="border bg-white p-4 rounded-lg w-full border-slate-800"
-          placeholder="Genera una receta con ingredientes. Ej. Bebida con Tequila y Fresa"
+          placeholder="Generate a recipe using ingredients. E.g. Tequila and Strawberry drink."
         />
         <button
           type="submit"
-          aria-label="Enviar"
+          aria-label="Submit"
           class="cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2"
         >
           <svg
