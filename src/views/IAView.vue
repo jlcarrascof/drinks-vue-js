@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { useIAStore } from '../stores/ia'
+
+const store = useIAStore()
+</script>
 
 <template>
   <h1 class="text-6xl font-extrabold">Generate AI Recipe</h1>
@@ -9,6 +13,7 @@
         <input
           name="prompt"
           id="prompt"
+          v-model="store.prompt"
           class="border bg-white p-4 rounded-lg w-full border-slate-800"
           placeholder="Generate a recipe using ingredients. E.g. Tequila and Strawberry drink."
         />
