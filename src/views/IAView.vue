@@ -14,6 +14,8 @@ const handleSubmit = () => {
     })
     return
   }
+
+  store.generarReceta()
 }
 </script>
 
@@ -21,7 +23,7 @@ const handleSubmit = () => {
   <h1 class="text-6xl font-extrabold">Generate AI Recipe</h1>
 
   <div class="max-w-4xl mx-auto">
-    <form class="flex flex-col space-y-3 py-10" @submit.prevent="store.generarReceta">
+    <form class="flex flex-col space-y-3 py-10" @submit.prevent="handleSubmit">
       <div class="relative">
         <input
           name="prompt"
