@@ -1,6 +1,8 @@
 <script setup>
 import { useIAStore } from '../stores/ia'
+import { useNotificacionStore } from '../stores/notificaciones'
 
+const notificacion = useNotificacionStore()
 const store = useIAStore()
 </script>
 
@@ -8,7 +10,7 @@ const store = useIAStore()
   <h1 class="text-6xl font-extrabold">Generate AI Recipe</h1>
 
   <div class="max-w-4xl mx-auto">
-    <form class="flex flex-col space-y-3 py-10">
+    <form class="flex flex-col space-y-3 py-10" @submit.prevent="store.generarReceta">
       <div class="relative">
         <input
           name="prompt"
