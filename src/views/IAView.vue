@@ -4,6 +4,17 @@ import { useNotificacionStore } from '../stores/notificaciones'
 
 const notificacion = useNotificacionStore()
 const store = useIAStore()
+
+const handleSubmit = () => {
+  if (store.prompt.trim() === '') {
+    notificacion.$patch({
+      texto: `The request can't be empty`,
+      mostrar: true,
+      error: true,
+    })
+    return
+  }
+}
 </script>
 
 <template>
