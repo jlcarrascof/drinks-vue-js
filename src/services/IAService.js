@@ -1,5 +1,8 @@
+import { openrouter } from '../lib/ia'
+import { streamText } from 'ai'
+
 export default {
   async generarReceta(prompt) {
-    console.log(prompt)
+    const resultado = streamText({})
   },
 }
