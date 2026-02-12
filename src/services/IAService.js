@@ -3,6 +3,12 @@ import { streamText } from 'ai'
 
 export default {
   async generarReceta(prompt) {
-    const resultado = streamText({})
+    const resultado = streamText({
+      // Cambia el ID específico por el router automático
+      model: openrouter('openrouter/free'),
+      prompt,
+    })
+
+    console.log(resultado.textStream)
   },
 }

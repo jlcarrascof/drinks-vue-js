@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import IAService from '@/services/IAService'
+import IAService from '../services/IAService'
 
 export const useIAStore = defineStore('ia', () => {
   const prompt = ref('')
