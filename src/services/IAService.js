@@ -9,6 +9,6 @@ export default {
       prompt,
     })
 
-    console.log(resultado.textStream)
+    return resultado.textStream
   },
 }
