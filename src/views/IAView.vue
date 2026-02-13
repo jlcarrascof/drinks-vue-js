@@ -57,7 +57,7 @@ const handleSubmit = () => {
       </div>
     </form>
 
-    <p v-if="store.cargando">Generating ....</p>
+    <p v-if="store.cargando" class="text-center animate-blink text-red-500">Generating ....</p>
     <div class="py-10 whitespace-pre-wrap">
       {{ store.respuesta }}
     </div>
