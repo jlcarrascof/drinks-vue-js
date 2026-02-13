@@ -36,6 +36,8 @@ const handleSubmit = () => {
           type="submit"
           aria-label="Submit"
           class="cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2"
+          :class="{ 'cursor-not-allowed opacity-50': store.cargando }"
+          :disabled="store.cargando"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
