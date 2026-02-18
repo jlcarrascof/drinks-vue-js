@@ -1,9 +1,18 @@
 <script setup>
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { useBebidasStore } from '../stores/bebidas'
 
 const route = useRoute()
+const store = useBebidasStore()
+
 const paginaInicio = computed(() => route.name === 'inicio')
+
+const handleSubmit = () => {
+  // TODO: Validar
+
+  store.obtenerRecetas()
+}
 </script>
 
 <template>
@@ -35,8 +44,9 @@ const paginaInicio = computed(() => route.name === 'inicio')
       </div>
 
       <form
-        class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
         v-if="paginaInicio"
+        class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+        @submit.prevent="handleSubmit"
       >
         <div class="space-y-4">
           <label class="block text-white uppercase font-extrabold text-lg" for="ingrediente"
@@ -47,14 +57,26 @@ const paginaInicio = computed(() => route.name === 'inicio')
             type="text"
             class="p-3 w-full rounded-lg focus:outline-none bg-white"
             placeholder="Name or Ingredient: e.g. Vodka, Tequila, etc."
+            v-model="store.busqueda.nombre"
           />
         </div>
         <div class="space-y-4">
           <label class="block text-white uppercase font-extrabold text-lg" for="categoria"
             >Category</label
           >
-          <select id="categoria" class="p-3 w-full rounded-lg focus:outline-none bg-white">
+          <select
+            id="categoria"
+            class="p-3 w-full rounded-lg focus:outline-none bg-white"
+            v-model="store.busqueda.categoria"
+          >
             <option value="">-- Select --</option>
+            <option
+              v-for="categoria in store.categorias"
+              :key="categoria.strCategory"
+              :value="categoria.strCategory"
+            >
+              {{ categoria.strCategory }}
+            </option>
           </select>
         </div>
         <input
