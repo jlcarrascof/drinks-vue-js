@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import HeaderForm from './components/HeaderForm.vue'
 import Modal from './components/ModalWindow.vue'
+import Notificacion from './components/NotificationMsg.vue'
 </script>
 
 <template>
@@ -12,4 +13,5 @@ import Modal from './components/ModalWindow.vue'
   </main>
 
   <Modal />
+  <Notificacion />
 </template>

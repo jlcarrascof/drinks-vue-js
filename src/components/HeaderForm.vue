@@ -2,14 +2,24 @@
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useBebidasStore } from '../stores/bebidas'
+import { useNotificacionStore } from '../stores/notificaciones'
 
 const route = useRoute()
 const store = useBebidasStore()
+const notificaciones = useNotificacionStore()
 
 const paginaInicio = computed(() => route.name === 'inicio')
 
 const handleSubmit = () => {
-  // TODO: Validar
+  if (Object.values(store.busqueda).includes('')) {
+    notificaciones.$state = {
+      texto: 'All fields are mandatory',
+      mostrar: true,
+      error: true,
+    }
+
+    return
+  }
 
   store.obtenerRecetas()
 }
@@ -24,21 +34,29 @@ const handleSubmit = () => {
             <img class="w-32" src="/img/logo.svg" alt="logotipo" />
           </RouterLink>
         </div>
-        <nav class="flex gap-4">
+        <nav class="flex gap-4 text-white">
           <RouterLink
             :to="{ name: 'inicio' }"
-            class="text-white uppercase font-bold"
-            active-class="!text-orange-500"
+            class="uppercase font-bold"
+            active-class="text-orange-500"
           >
             Home
           </RouterLink>
 
           <RouterLink
             :to="{ name: 'favoritos' }"
-            class="text-white uppercase font-bold"
-            active-class="!text-orange-500"
+            class="uppercase font-bold"
+            active-class="text-orange-500"
           >
             Favorites
+          </RouterLink>
+
+          <RouterLink
+            :to="{ name: 'ia' }"
+            class="uppercase font-bold"
+            active-class="text-orange-500"
+          >
+            Generate with AI
           </RouterLink>
         </nav>
       </div>
