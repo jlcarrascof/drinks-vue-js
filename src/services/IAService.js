@@ -7,6 +7,8 @@ export default {
       // Cambia el ID específico por el router automático
       model: openrouter('openrouter/free'),
       prompt,
+      system: 'Da las respuestas siempre en Inglés',
+      temperature: 0.3,
     })
 
     return resultado.textStream
